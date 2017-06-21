@@ -8,6 +8,17 @@ public class GetMode {
 
         int[] arr = {1,2,18,4,5};
         int[] arr2 = new int[5];
+        int[] arr3 = new int[6];
+
+        Arrays.fill(arr3,2);
+        System.out.println("array3 is " + Arrays.toString(arr3));
+
+        Arrays.sort(arr);
+        System.out.println("arr is " + Arrays.toString(arr));
+
+
+
+        System.out.println("the 2 element---" + arr[2]);
 
         print(arr);
 
@@ -17,6 +28,7 @@ public class GetMode {
         arr2[3] = 300;
         arr2[4] = 400;
 
+
         print(arr2);
         System.out.println("half search " + gm.halfSearch(arr2,300));
         print(arr2);
@@ -24,7 +36,23 @@ public class GetMode {
         System.out.println(gm.getMin(arr));
 
 
+        //build 2D matrix
+        int [][] array2D = new int[3][3];
+
+
+        for(int i = 0, j=1; i < array2D.length; i++) {
+            for(int ii = 0; ii < array2D[0].length; ii++){
+                array2D[i][ii] = j++;
+            }
+        }
+
+        System.out.println(Arrays.deepToString(array2D));
+
+
     }
+
+
+
 
     private static void print(int[] arry) {
         System.out.println("begin to print");
